@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Material extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nombre', 'descripcion', 'categoria_id'];
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
 }
