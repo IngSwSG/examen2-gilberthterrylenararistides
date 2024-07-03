@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/materiales', [MaterialController::class, 'index']);
+
+Route::post('/materiales', [MaterialController::class, 'store']);
