@@ -24,4 +24,13 @@ class MaterialController extends Controller
         ], 201);
     }
 
+    public function update(StoreMaterialRequest $request, Material $material)
+    {
+        $material->update($request->validated());
+
+        return response()->json([
+        'message' => 'Material actualizado exitosamente',
+        'material' => $material
+        ]);
+    }  
 }
