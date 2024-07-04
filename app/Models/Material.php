@@ -11,6 +11,8 @@ class Material extends Model
 
     protected $fillable = ['nombre', 'descripcion', 'categoria_id'];
 
+    protected $table = 'materiales';
+
     public function categoria()
     {
         return $this->belongsTo(Categoria::class);
